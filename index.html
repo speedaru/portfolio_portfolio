@@ -29,13 +29,13 @@
     </header>
 
     <!-- HERO SECTION -->
-    <section id="hero">
+    <section id="hero" data-fade>
         <div class="container hero-content">
             <h2>Étudiant en informatique & développeur passionné
                 <br>(recherche d'alternance)
             </h2>
             <h1 class="highlight">IEGOR TAFTAI</h1>
-            <h2>Développement Système & Cybersécurité</h2>
+            <h2><span class="typing-effect">Développement Système & Cybersécurité</span></h2>
             <p>
                 Futur alternant C++/Système, passionné par la compréhension des systèmes (Windows, gestion mémoire, bas niveau).
                 J’apprends surtout en réalisant des projets concrets et en testant directement.
@@ -48,7 +48,7 @@
     </section>
 
     <!-- INTRODUCTION -->
-    <section id="intro" style="padding-top: 0px;">
+    <section id="intro" style="padding-top: 0px;" data-fade>
         <div class="container">
             <div class="section-header">
                 <h2>Mon Profil</h2>
@@ -71,7 +71,7 @@
     </section>
 
     <!-- MISSION et OBJECTIFS -->
-    <section id="objectifs">
+    <section id="objectifs" data-fade>
         <div class="container">
             <div class="flex-row">
                 <!-- mission -->
@@ -112,7 +112,7 @@
     </section>
 
     <!-- COMPETENCES -->
-    <section id="skills">
+    <section id="skills" data-fade>
         <div class="container">
             <div class="section-header">
                 <h2>Profil de Compétences</h2>
@@ -214,7 +214,7 @@
     </section>
 
     <!-- PROJETS -->
-    <section id="projects">
+    <section id="projects" data-fade>
         <div class="container">
             <div class="section-header">
                 <h2>Projets</h2>
@@ -318,7 +318,7 @@
     </section>
 
     <!-- FORMATION -->
-    <section id="education">
+    <section id="education" data-fade>
         <div class="container">
             <div class="section-header">
                 <h2>PARCOURS</h2>
@@ -367,7 +367,7 @@
     </section>
 
     <!-- CONTACT / FOOTER -->
-    <footer id="contact">
+    <footer id="contact" data-fade>
         <div class="container contacts">
             <h2 style="margin-bottom: 20px;">Intéressé par mon profil <span class="highlight">?</span></h2>
             <p style="color: var(--text-gray); max-width: 600px; margin: 0 auto 15px;">
@@ -426,6 +426,17 @@
                 closeMenu();
             }
         });
+
+        // Intersection Observer for fade-in animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('[data-fade]').forEach(el => observer.observe(el));
     </script>
 </body>
 </html>
