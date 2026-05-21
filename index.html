@@ -264,6 +264,48 @@
                     </div>
                 </div>
 
+                <div class="card">
+                    <h3>Pilote UEFI — Émulation de Tables SMBIOS &amp; Protection de Code</h3>
+                    <p style="margin-top: 10px;">
+                        Développement en langage C d’un pilote de bas niveau au standard UEFI s'exécutant lors de la phase de pré-démarrage (Boot phase), avant l'initialisation du système d'exploitation. Conçu pour parser et modifier dynamiquement les structures de tables SMBIOS (notamment les UUID matériels) à des fins d'émulation d'environnements de test. Intégration de mécanismes de protection de code contre l'analyse statique via le chiffrement de chaînes (XOR dynamique) et conception d'une couche de gestion de mémoire pour chaînes de caractères dynamiques en C pur.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">C</span>
+                        <span class="tag">UEFI / EDK2</span>
+                        <span class="tag">Firmware</span>
+                        <span class="tag">Sécurité Logicielle</span>
+                        <a href="https://github.com/speedaru/UefiResearch1" class="tag fa-brands fa-github" target="_blank"></a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Framework GUI C++ — Abstraction Windows &amp; Rendu Matériel DirectX 11</h3>
+                    <p style="margin-top: 10px;">
+                        Conception et développement d'un framework d'interface graphique (GUI) léger et hautement optimisé en C++ pour les applications de bureau Windows (Win32). Implémentation d'une architecture entièrement orientée objet (POO) encapsulant la gestion des fenêtres natives, la gestion des événements système et un pipeline de rendu graphique accéléré par le matériel via <strong>DirectX 11</strong> et <strong>ImGui</strong>. Intégration de modules réutilisables pour la gestion dynamique des polices, des palettes de couleurs et de systèmes d'animations fluides.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">C++</span>
+                        <span class="tag">DirectX 11</span>
+                        <span class="tag">ImGui</span>
+                        <span class="tag">Architecture POO</span>
+                        <a href="https://github.com/speedaru/cpp_gui_framework" class="tag fa-brands fa-github" target="_blank"></a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Bibliothèque de Structures de Données — Réimplémentation STL compatible Kernel-Mode</h3>
+                    <p style="margin-top: 10px;">
+                        Conception et développement d'une bibliothèque C++ autonome (Zero-dependency) réimplémentant les conteneurs et utilitaires fondamentaux de la STL (<code>Vector</code>, <code>String</code>, <code>Unordered_Map</code>, itérateurs et <code>type_traits</code>). Spécifiquement optimisée pour contourner l'absence de bibliothèque standard en mode noyau Windows (KMDF). Implémentation d'une gestion fine de l'allocation bare-metal via la surcharge personnalisée des opérateurs d'allocation (<code>new</code>/<code>delete</code>) interconnectés avec les pools de mémoire Kernel, utilisation avancée des templates pour la métaprogrammation et validation par tests unitaires pour assurer une stabilité système absolue.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">C++</span>
+                        <span class="tag">Windows Kernel</span>
+                        <span class="tag">Structures de Données</span>
+                        <span class="tag">Métaprogrammation</span>
+                        <a href="https://github.com/speedaru/cpp-datastructs" class="tag fa-brands fa-github" target="_blank"></a>
+                    </div>
+                </div>
+
                 <!-- Projet editeur de texte -->
                 <div class="card">
                     <h3>Éditeur de texte Console</h3>
